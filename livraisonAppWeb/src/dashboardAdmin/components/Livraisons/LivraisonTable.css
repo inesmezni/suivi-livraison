@@ -1,0 +1,92 @@
+.table-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.livraisons-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.livraisons-table th,
+.livraisons-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.livraisons-table th {
+  background-color: #f4f4f4;
+}
+
+.livraisons-table td {
+  vertical-align: middle;
+}
+
+.livraisons-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Style pour le statut en lecture seule */
+.status-label {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  min-width: 100px;
+}
+
+.status-pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-in-progress {
+  background-color: #cce7ff;
+  color: #004085;
+  border: 1px solid #b3d7ff;
+}
+
+.status-delivered {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Actions boutons - */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.btn-view {
+  background-color: #4caf50;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

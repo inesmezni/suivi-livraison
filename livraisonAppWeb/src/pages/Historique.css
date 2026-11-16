@@ -1,0 +1,270 @@
+:root {
+  --bg-page: #f5f3ff;
+  --bg-card: #ffffff;
+  --green: #16a34a;
+  --green-soft: #22c55e;
+  --purple: #a855f7;
+  --purple-dark: #7e22ce;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --border-soft: #e5e7eb;
+  --shadow-card: 0 18px 35px rgba(15, 23, 42, 0.07);
+  --radius-xl: 18px;
+  --font: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg-page);
+}
+
+/* Page */
+
+.history-page {
+  min-height: 100vh;
+  padding: 24px 40px 40px;
+  background: linear-gradient(180deg, #f8f5ff 0%, #ffffff 40%);
+  color: var(--text-main);
+}
+
+/* Header */
+
+.history-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.history-back {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(148, 163, 184, 0.45);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.history-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.history-subtitle {
+  margin: 2px 0 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Search & filters */
+
+.history-filters {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  margin-bottom: 24px;
+}
+
+.history-search {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f3f4ff;
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+
+.history-search-icon {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.history-search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  width: 100%;
+}
+
+.history-chips {
+  display: flex;
+  gap: 10px;
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 8px 18px;
+  border: none;
+  background: #f3f4ff;
+  color: var(--text-main);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.chip-active {
+  background: var(--purple);
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(168, 85, 247, 0.5);
+}
+
+/* Liste */
+
+.history-list {
+  margin-top: 8px;
+}
+
+/* Card livraison */
+
+.delivery-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  padding: 18px 22px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: var(--shadow-card);
+}
+
+.delivery-left {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex: 1.2;
+}
+
+.delivery-status-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.delivery-id-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.delivery-id {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.delivery-status-pill {
+  background: #d1fae5;
+  color: var(--green-soft);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.delivery-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.delivery-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.delivery-icon {
+  font-size: 16px;
+}
+
+/* Colonnes droites */
+
+.delivery-meta {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(180px, auto);
+  gap: 18px;
+  align-items: center;
+  padding-left: 26px;
+  border-left: 1px solid var(--border-soft);
+}
+
+.delivery-meta-block {
+  background: #f9fafb;
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.meta-value {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.delivery-meta-action {
+  background: #f5f3ff;
+}
+
+.details-link {
+  margin-top: 2px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--purple-dark);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 960px) {
+  .history-page {
+    padding: 16px;
+  }
+
+  .history-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .delivery-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .delivery-meta {
+    border-left: none;
+    padding-left: 0;
+    grid-auto-flow: row;
+    grid-auto-columns: 1fr;
+  }
+}

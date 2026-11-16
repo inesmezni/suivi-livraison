@@ -1,0 +1,232 @@
+/* SignupClient.css – Version CORRIGÉE FINALE ULTRA-BEAU 2025 (icônes ESPACÉES PARFAITEMENT) */
+.signup-client-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8faff 0%, #f0f9ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.signup-client-card {
+  width: 100%;
+  max-width: 580px;
+  background: white;
+  border-radius: 36px;
+  padding: 4rem 3.5rem;
+  box-shadow:
+    0 30px 80px rgba(14, 116, 233, 0.14),
+    0 0 0 1px rgba(14, 165, 233, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-client-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, #0ea5e9, #22d3ee, #86efac, #22c55e);
+  border-radius: 36px 36px 0 0;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #64748b;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.back-btn:hover {
+  color: #0ea5e9;
+  transform: translateX(-4px);
+}
+
+.signup-header {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+.signup-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color:#0ea5e9 ;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.8px;
+}
+.signup-header p {
+  color: #475569;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Grille des champs */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  margin-bottom: 1.4rem;
+}
+.full {
+  grid-column: 1 / -1;
+}
+
+/* Groupe d'input – ESPACE AUGMENTÉ POUR ICÔNES */
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1.4rem 1.6rem 1.4rem 4.6rem !important; /* ESPACE GAUCHE AUGMENTÉ → icônes ESPACÉES */
+  border: 2px solid #e0e7ff;
+  border-radius: 20px;
+  font-size: 1.05rem;
+  background: #fafbff;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #1e293b;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: #94a3b8;
+  font-weight: 500;
+  padding-left: 0.4rem; /* Petit espace interne pour le texte */
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  background: white;
+  box-shadow: 0 0 0 6px rgba(14, 165, 233, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Icônes parfaitement centrées et ESPACÉES */
+.icon {
+  position: absolute;
+  left: 1.8rem !important; /* Position ajustée pour ESPACE PARFAIT */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #64748b;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Champ spécial : Numéro de suivi préféré */
+.tracking-number-group {
+  position: relative;
+  margin: 2rem 0 1.8rem;
+  padding: 1.4rem 1.6rem;
+  background: linear-gradient(135deg, #f0fdf4, #f0fdfa);
+  border: 2px dashed #86efac;
+  border-radius: 22px;
+  transition: all 0.3s ease;
+}
+.tracking-number-group:hover {
+  border-color: #22c55e;
+  background: linear-gradient(135deg, #ecfdf5, #f0fdfa);
+}
+.tracking-number-group .icon {
+  color: #16a34a;
+}
+.tracking-number-group input {
+  background: white;
+  border-color: #86efac;
+  font-weight: 600;
+  color: #166534;
+}
+.tracking-number-group input::placeholder {
+  color: #16a34a;
+  font-style: italic;
+}
+
+/* Mot de passe */
+.password-group {
+  position: relative;
+}
+.toggle-eye {
+  position: absolute;
+  right: 1.4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #0ea5e9;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  border-radius: 14px;
+  transition: background 0.2s;
+}
+.toggle-eye:hover {
+  background: #ecfeff;
+}
+
+/* Bouton principal */
+.submit-btn {
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 40px rgba(14, 165, 233, 0.35);
+}
+.submit-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 60px rgba(14, 165, 233, 0.45);
+}
+
+/* Texte connexion */
+.login-text {
+  text-align: center;
+  margin-top: 3rem;
+  color: #64748b;
+  font-size: 1.02rem;
+  font-weight: 500;
+}
+.login-link {
+  color: #0ea5e9;
+  font-weight: 700;
+  text-decoration: none;
+}
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+  .signup-client-card {
+    padding: 3rem 2rem;
+    border-radius: 28px;
+  }
+  .signup-header h1 {
+    font-size: 2.4rem;
+  }
+  .tracking-number-group {
+    padding: 1.2rem 1.4rem;
+  }
+}

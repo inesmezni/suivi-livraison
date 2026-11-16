@@ -1,0 +1,60 @@
+.clients-page {
+  padding: 40px 30px;
+  background: #ffffff;           /* Fond blanc pur comme Livreurs */
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.page-header {
+  margin-bottom: 36px;
+  text-align: left;
+}
+
+.page-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #1e293b;
+  margin: 0;
+}
+
+/* Tableau identique à Livreurs */
+.table-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.clients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clients-table th {
+  background: #f1f5f9;
+  padding: 18px;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+}
+
+.clients-table td {
+  padding: 18px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+}
+
+.clients-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.clients-table strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .clients-page { padding: 20px 15px; }
+  .page-title { font-size: 2.2rem; text-align: center; }
+}

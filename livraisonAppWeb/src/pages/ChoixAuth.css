@@ -1,0 +1,164 @@
+/* ChoixAuth.css – Version ULTRA BEAU 2025 : couleurs claires, modernes et chaleureuses */
+.choix-auth-container {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fond animé très léger (optionnel mais classe) */
+.choix-auth-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 960px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  border-radius: 40px;
+  padding: 5rem 4rem;
+  box-shadow: 
+    0 32px 80px rgba(14, 116, 233, 0.12),
+    0 0 0 1px rgba(14, 165, 233, 0.1);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Titre principal – magnifique dégradé doux */
+.auth-header h1 {
+  font-size: 3.6rem;
+  font-weight: 900;
+ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0 0 1rem 0;
+  letter-spacing: -1.2px;
+  line-height: 1.1;
+}
+
+.auth-header p {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #0c4a6e;
+  margin: 0 0 4rem 0;
+  opacity: 0.9;
+}
+
+/* Cartes côte à côte – style glass + hover élégant */
+.auth-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2.5rem;
+}
+
+.auth-option {
+  background: white;
+  border-radius: 28px;
+  padding: 3.5rem 2.5rem;
+  border: 2px solid #e0f2fe;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-option::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.04), rgba(34, 197, 94, 0.04));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 28px;
+}
+
+.auth-option:hover::before {
+  opacity: 1;
+}
+
+.auth-option:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 32px 70px rgba(14, 165, 233, 0.2);
+}
+
+.auth-option svg {
+  width: 80px;
+  height: 80px;
+  color: #764ba2;
+  margin-bottom: 2rem;
+  filter: drop-shadow(0 8px 16px rgba(14, 165, 233, 0.2));
+  transition: all 0.3s ease;
+}
+
+.auth-option:hover svg {
+  transform: scale(1.12);
+  color: #0891b2;
+}
+
+.auth-option h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0c4a6e;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
+}
+
+.auth-option p {
+  font-size: 1.15rem;
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive parfait */
+@media (max-width: 768px) {
+  .auth-wrapper {
+    padding: 3.5rem 2rem;
+    border-radius: 32px;
+  }
+  .auth-header h1 {
+    font-size: 2.8rem;
+  }
+  .auth-header p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+  }
+  .auth-options {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .auth-option {
+    padding: 3rem 2rem;
+  }
+  .auth-option svg {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-header h1 {
+    font-size: 2.4rem;
+  }
+  .auth-option {
+    padding: 2.5rem 1.5rem;
+  }
+}
